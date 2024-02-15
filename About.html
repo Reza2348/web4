@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About</title>
+    <link rel="stylesheet" href="/src/output.css" />
+    <link rel="icon" type="image/x-icon" href="/src/icon/1046849.png" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .pag {
+        border: 1px solid rgba(0, 0, 0, 0.532);
+        background-color: white;
+        color: black;
+        padding: 15px;
+        margin: 15px;
+      }
+      #sidenav {
+        position: fixed;
+        border: 1px solid darkgreen;
+        background-color: rgba(0, 0, 0, 0.474);
+        right: -200px;
+        top: 0;
+        height: 100%;
+        width: 200px;
+        transition: 1s;
+      }
+      .bnt {
+        color: white;
+        text-decoration: none;
+        display: block;
+        text-align: center;
+        margin: 34px;
+      }
+      .bnt:hover {
+        background-color: darkcyan;
+      }
+    </style>
+  </head>
+  <body class="text-gray-600 font-serif">
+    <div class="grid md:cols-3">
+      <div class="md:col-span-1 md:flex md:justify-end">
+        <nav class="text-right bg-slate-900 text-white">
+          <div class="flex justify-between items-center">
+            <h1 class="font-bold uppercase p-4 border-b border-gray-100">
+              <a href="/" class="hover:text-gray-700">For Food</a>
+            </h1>
+            <div class="px-4 cursor-pointer md:hidden" id="burger">
+              <svg
+                class="w-6"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                ></path>
+              </svg>
+            </div>
+          </div>
+          <ul class="text-sm mt-6 hidden md:block" id="menu">
+            <li class="font-bold">
+              <a
+                class="text-center px-4 flex justify-end p-4"
+                href="/src/index.html"
+              >
+                <span>Hoem</span>
+                <svg
+                  class="w-5 ml-2"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
+                  ></path>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a class="text-cente px-4 flex justify-end p-4" href="#">
+                <span>About</span>
+                <svg
+                  class="w-5 ml-2"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z"
+                  ></path>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a
+                class="text-cente px-4 flex justify-end p-4"
+                href="/src/Conttact.html"
+              >
+                <span>Conttact</span>
+                <svg
+                  class="w-5 ml-2"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
+                  ></path>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a class="text-cente px-4 flex justify-end p-4" href="#">
+                <span>cart</span>
+                <svg
+                  class="w-5 ml-2"
+                  data-slot="icon"
+                  fill="none"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
+                  ></path>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <main class="px-16 py-6 bg-gray-100 md:col-span-2">
+          <div class="flex justify-center md:justify-end">
+            <a
+              href="/src/sign up .html"
+              class="btn text-primary border-primary border-2 hover:bg-primary hover:text-white"
+              ><span>Sign up</span></a
+            >
+            <a
+              href="/src/Login.html"
+              class="btn text-primary ml-2 border-primary border-2 hover:bg-primary hover:text-white"
+              >login</a
+            >
+          </div>
+          <div id="sidenav">
+            <svg
+              onclick="hideSidenav()"
+              xmlns="http://www.w3.org/2000/svg"
+              class="ionicon"
+              style="width: 2.25rem; display: inline-block; cursor: pointer"
+              viewBox="0 0 512 512"
+            >
+              <path
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="32"
+                d="M368 368L144 144M368 144L144 368"
+              />
+            </svg>
+            <a href="#" class="bnt">profile</a>
+            <a href="#" class="bnt">wallet</a>
+            <a href="#" class="bnt">Recharge wallet</a>
+            <a href="#" class="bnt">Wallet withdrawal</a>
+          </div>
+          <div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="ionicon"
+              viewBox="0 0 512 512"
+              onclick="showSidenav()"
+              style="
+                width: 2.25rem;
+                display: inline-block;
+                cursor: pointer;
+                margin-left: 1099px;
+              "
+            >
+              <path
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-miterlimit="10"
+                stroke-width="32"
+                d="M80 160h352M80 256h352M80 352h352"
+              ></path>
+            </svg>
+          </div>
+          <header>
+            <h2 class="text-gray-700 text-6xl font-semibold">Recipes</h2>
+            <h3 class="text-2xl font-semibold py-2 px-3">
+              Food from all countries
+            </h3>
+          </header>
+          <div>
+            <div>
+              <div>
+                <p id="p1" class="pag">about site</p>
+                <p id="p2" class="pag">
+                  Our site is about restaurant menu and you can order Iranian
+                  and foreign food and you can order your favorite restaurant in
+                  your city. We will be very happy if you visit our site. Thank
+                  you.
+                </p>
+              </div>
+              <div>
+                <p id="p3" class="pag">about us</p>
+                <p id="p4" class="pag">
+                  What is the use of the network? What is a network? In words,
+                  it is a group of people or objects that are able to share
+                  information in a meaningful way with each other. In the
+                  concepts of information technology, "computer networks" or
+                  "data network" is called "network" for short, which means that
+                  computers are tools and objects that share information in an
+                  understandable way. At a higher and conceptual level, data
+                  networks include nodes that computers and digital devices can
+                  transfer messages between nodes through links and physical
+                  communications (wired and wireless).
+                </p>
+              </div>
+              <div>
+                <p id="p5" class="pag">
+                  Registration training and login to the site
+                </p>
+                <video id="p6" controls>
+                  <source
+                    src="/src/video/Document - Google Chrome 2024-02-06 11-34-56.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+              </div>
+              <div class="mt-8 grid lg:grid-cols-4 gap-10"></div>
+              <div class="flex justify-center py-2 px-2">
+                <div class="btn bg-secondary-100 text-secondary-200 py-4 px-4">
+                  Load more
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+    <script src="menu.js"></script>
+    <script src="/node_modules/jquery/dist/jquery.js"></script>
+    <script>
+      $(function () {
+        $("#p1").click(function () {
+          $("#p2").slideToggle(1000);
+        });
+        $("#p3").click(function () {
+          $("#p4").slideToggle(1000);
+        });
+        $("#p5").click(function () {
+          $("#p6").slideToggle(1000);
+        });
+      });
+      let showSidenav = function () {
+        document.getElementById("sidenav").style.right = "0px";
+      };
+      let hideSidenav = function () {
+        document.getElementById("sidenav").style.right = "-200px";
+      };
+    </script>
+  </body>
+</html>
